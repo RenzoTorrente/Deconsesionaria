@@ -1,0 +1,26 @@
+.wrapper_score{
+width: 90%;
+flex-wrap: wrap;
+height: 100px;
+justify-content: space-between;
+align-items: center;
+}
+.title_score{
+width: 60%;
+}
+.star_score{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+.title_text{
+    font-weight: bold;
+    color:rgb(63, 60, 60)
+}
+input[type="radio"]{
+    display: none;
+}
+.star{    
+    transition:0.2s ease ;
+    cursor: pointer;
+}

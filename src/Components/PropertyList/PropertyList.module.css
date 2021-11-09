@@ -1,0 +1,32 @@
+.container_property{
+ width:  100%;
+ margin:0px auto;
+ height: auto;
+ border-radius: 12px;
+ border:1px solid #ccc;
+
+}
+.button_list{
+    width: 100%;
+    background: #FF7F00;
+    color:white;
+    height: 100%;
+  
+}
+.button_list:hover{
+text-decoration: underline;
+}
+.grid_wrap{
+background: #FF7F00;
+flex-wrap: wrap;
+height: 80px;
+align-items: center;
+padding: 0px 10px;
+border-radius: 12px 12px 0px 0px;
+}
+.wrapper_score{
+width: 90%;
+height: auto;
+padding: 20px 0px;
+margin:0px auto;
+}

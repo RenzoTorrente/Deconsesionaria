@@ -1,0 +1,25 @@
+.form_property{
+    min-height:450px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    width:60% ;
+    margin:0px auto;
+    box-shadow: 1px 1px 1px #ccc;
+}
+.form_box{
+padding:20px;
+flex:1;
+align-items: center;
+justify-content: center;
+
+}
+.container_button{
+  width: 100%;
+  flex-direction: row;  
+  justify-content: flex-end;
+  float: right;
+}
+.wrapper{
+    width: 100%;
+    height: auto;
+}
