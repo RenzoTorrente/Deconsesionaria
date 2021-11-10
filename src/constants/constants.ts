@@ -17,6 +17,10 @@ export const categorias ={
   REQUIRED: "debe seleccionar una propiedad",
   FIELDNAME:"categoria"
 }
+export const property ={
+  REQUIRED: "debe seleccionar una propiedad",
+  FIELDNAME:"categoria"
+}
 
 export const nuevapropiedad = {
   FIELDNAME:"newprop",

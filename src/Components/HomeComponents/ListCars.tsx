@@ -12,7 +12,7 @@ export function ListCars ({cars}:{cars:carview [] | []}):JSX.Element{
  const navigate = useNavigate();
 if(cars.length < 1){
 return (
-    <Emptymsg text="vehiculo"/>
+    <Emptymsg text=" ningun vehiculo agregado"/>
 )
 }
 let queryClient = useQueryClient();

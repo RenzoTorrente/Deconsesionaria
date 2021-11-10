@@ -6,7 +6,10 @@ import { Loading } from "../SharaUI/Loading/loading";
 import { Errormsg } from "../SharaUI/Error/Errormsg";
 import { ListCars } from "./ListCars";
 import { AddIcon } from '@chakra-ui/icons';
+import { useNavigate } from "react-router";
 function RegisteredList(): JSX.Element {
+  const navigate = useNavigate();
+
   const { isLoading, isError, data, error }:any = useQuery("allcars", GetAllCars);
   return (
     <Stack w="80%" style={{margin:"0px auto"}}>
@@ -39,7 +42,7 @@ function RegisteredList(): JSX.Element {
         </Box>
 
         <Flex w="50%" justifyContent={"flex-end"} >
-          <Button colorScheme={"orange"} size="sm">
+          <Button colorScheme={"orange"} size="sm" onClick={(e)=>{navigate('/register')}}>
             <Icon color="white"  as={AddIcon}/>
           </Button>
         </Flex>

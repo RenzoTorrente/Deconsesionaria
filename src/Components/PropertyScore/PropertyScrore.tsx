@@ -1,19 +1,27 @@
 import { Flex, Box, Text } from '@chakra-ui/react';
-import React,{useState} from  'react';
+import React,{useState,useEffect} from  'react';
 import {FaStar} from 'react-icons/fa';
 import styles from './PropertyScore.module.css';
-function PropertyScore({property}:{property:any}):JSX.Element{
+import { propertiescore } from '../../utilities/types';
+import { UpdateVehiclePropertyValue } from '../../services/PropertyService';
+function PropertyScore({prop , carid}:{prop:propertiescore, carid:number}):JSX.Element{
+ 
+
+
 const [score, setScore]:any = useState();
 const [hover, setHover]:any = useState();
 
-function updateScore(scorevalue:any){
+useEffect(() => {
+setScore(prop.value);
+}, [prop]);
+async function updateScore(scorevalue:any){
 setScore(scorevalue);
-console.log(scorevalue);
+const updatevehicleproperty = await UpdateVehiclePropertyValue(carid, prop.id, score); 
 }
 return(
-<Flex className={styles.wrapper_score}>
+<Flex className={styles.wrapper_score} key={prop.id}>
 <Box className={styles.title_score}>
-<Text fontSize={"sm"} className={styles.title_text}>{property.name}</Text>
+<Text fontSize={"sm"} className={styles.title_text}>{prop.name}</Text>
 </Box>
 <Box className={styles.star_score}>
 {[...Array(5)].map((star, i) => {

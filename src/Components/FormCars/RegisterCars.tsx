@@ -16,7 +16,6 @@ async function OnSubmit(values:formvalues, e:any){
 setsubmit({...submit, disabledbutton:true})
 try{
 let res = await AddCar(values.carname);
-console.log(res);
 setsubmit({...submit, disabledbutton:false});
 e.target.reset();
 }catch(err){

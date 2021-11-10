@@ -1,14 +1,14 @@
 import axiosIntance from '../utilities/axios';
 
 
-export async function GetCarById(id:string):Promise<any>{
+export async function GetCarById(id:any):Promise<any>{
 let resp = await axiosIntance.get(`/cars/${id}`);
-return resp;
+return resp.data;
 }
 
 export async function AddCar(car:string){
 let resp = await axiosIntance.post(`/cars`, {name:car});
-return resp;
+return resp.data;
 
 }
 export async function GetAllCars():Promise<any>{
@@ -18,7 +18,7 @@ export async function GetAllCars():Promise<any>{
  
  export async function UpdateCar(id:string, name:string){
  let resp = await axiosIntance.put(`cars/${id}`, name);
-  return resp;
+  return resp.data;
  }
 
  

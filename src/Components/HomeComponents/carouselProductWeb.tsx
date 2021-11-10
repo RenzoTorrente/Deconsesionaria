@@ -11,9 +11,8 @@ const settings = {
   infinite: true,
   autoplay: true,
   speed: 1000,
-  autoplaySpeed: 4000,
+  autoplaySpeed: 3000,
   slidesToShow: 2,
-  slidesToScroll: 2,
 };
 
 export default function CarouselProductWeb() {
@@ -51,9 +50,7 @@ export default function CarouselProductWeb() {
          
           >
           <Flex w="50%" marginLeft={{base:5, md:4, lg:3}} height={"100%"}justifyContent={"center"} alignItems={"center"}>
-          <Heading as="h4" size="xl" boxShadow={"2px #ccc"} color="whiteAlpha.800">
-           {elem.title}
-          </Heading>
+
           
           </Flex>
          
