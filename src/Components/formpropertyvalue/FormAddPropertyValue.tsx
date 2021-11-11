@@ -16,9 +16,9 @@ function FormAddPropertyValue({car}:{car:carview}){
 async function onSubmit(value:any, e:any){
 e.preventDefault();
 let respaddvehicle = await addVehicleProperty(car.id, value.categoria);
-queryClient.invalidateQueries("vehicleproperties")
-
-reset()
+queryClient.invalidateQueries("categorias");
+queryClient.invalidateQueries("vehicleproperties");
+reset();
 }
  return (
 <Stack  className={styles.form_inline} >

@@ -5,12 +5,10 @@ import { Grid,Box, GridItem, Flex, Button,Text } from "@chakra-ui/react";
 import {  categories } from '../../utilities/types';
 import { useQuery , useQueryClient,useMutation } from 'react-query';
 import { getVehicleProperties } from '../../services/PropertyService';
-import { Emptymsg } from '../SharaUI/Empty/Emptymsg';
-import { Errormsg } from '../SharaUI/Error/Errormsg';
-import {Loading} from '../SharaUI/Loading/loading';
+
 function Properties ({allcategories, carid}:{allcategories:categories[] | [], carid:number}):JSX.Element{
  let [catid, setcatid] = useState(1);
-  const {data,isError, isLoading} = useQuery(["users",  catid, carid],() => getVehicleProperties(catid, carid) );
+  const {data,isError, isLoading} = useQuery(["categorias",  catid, carid],() => getVehicleProperties(catid, carid) );
   function categoryChange(e:any, values:number){
   e.preventDefault();
   setcatid(values);
