@@ -51,9 +51,7 @@ export default function CarouselProductWeb() {
          
           >
           <Flex w="50%" marginLeft={{base:5, md:4, lg:3}} height={"100%"}justifyContent={"center"} alignItems={"center"}>
-          <Heading as="h4" size="xl" boxShadow={"2px #ccc"} color="whiteAlpha.800">
-           {elem.title}
-          </Heading>
+         
           
           </Flex>
          
